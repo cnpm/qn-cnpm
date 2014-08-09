@@ -1,0 +1,32 @@
+{
+  "name": "qn-cnpm",
+  "version": "1.0.0",
+  "description": "qnfs cnpm wrapper",
+  "main": "index.js",
+  "scripts": {
+    "test": "make test"
+  },
+  "keywords": [
+    "qn",
+    "cnpm",
+    "storage"
+  ],
+  "author": {
+    "name": "dead-horse",
+    "email": "dead_horse@qq.com",
+    "url": "http://deadhorse.me"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cnpm/qn-cnpm"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "qn": "~0.2.2",
+    "thunkify-wrap": "~1.0.2"
+  },
+  "devDependencies": {
+    "autod": "~0.3.2",
+    "jshint": "*"
+  }
+}
