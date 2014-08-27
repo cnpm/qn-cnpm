@@ -57,8 +57,8 @@ Client.prototype.upload = function* (filepath, options) {
     key: options.key,
     size: options.size
   });
-  var url = res && res[0] ? res[0].url : '';
-  return { url: url };
+
+  return { url: parseUrl(res) };
 };
 
 Client.prototype.uploadBuffer = function *(buf, options) {
@@ -69,9 +69,19 @@ Client.prototype.uploadBuffer = function *(buf, options) {
   }
 
   var res = yield this.client.upload(buf, {key: options.key});
-  var url = res && res[0] ? res[0].url : '';
-  return { url: url };
+  return { url: parseUrl(res) };
 };
+
+function parseUrl(res) {
+  if (!res || !res[0] || !res[0].url) {
+    return null;
+  }
+  var url = res[0].url;
+  if (url.indexOf('http') !== 0) {
+    url = 'http://' + url;
+  }
+  return url;
+}
 
 Client.prototype.url = function (key) {
   return this.client.resourceURL(key);
