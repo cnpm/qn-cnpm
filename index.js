@@ -61,7 +61,7 @@ Client.prototype.upload = function* (filepath, options) {
   return { url: parseUrl(res) };
 };
 
-Client.prototype.uploadBuffer = function *(buf, options) {
+Client.prototype.uploadBuffer = function* (buf, options) {
   try {
     yield this.client.delete(options.key);
   } catch (err) {
@@ -95,7 +95,7 @@ Client.prototype.download = function* (key, filepath, options) {
   });
 };
 
-Client.prototype.remove = function *(key) {
+Client.prototype.remove = function* (key) {
   try {
     return yield this.client.delete(key);
   } catch (err) {

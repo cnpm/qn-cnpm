@@ -40,4 +40,7 @@ autod:
 	@node_modules/.bin/autod -w -e example.js --prefix=~
 	@$(MAKE) install
 
+contributors:
+	@node_modules/.bin/contributors -f plain -o AUTHORS
+
 .PHONY: test
