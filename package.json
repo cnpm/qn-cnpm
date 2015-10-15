@@ -1,6 +1,6 @@
 {
   "name": "qn-cnpm",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "qnfs cnpm wrapper",
   "main": "index.js",
   "scripts": {
