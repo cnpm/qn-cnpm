@@ -22,7 +22,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "qn": "~1.0.1",
+    "qn": "^1.1.0",
     "thunkify-wrap": "~1.0.2"
   },
   "devDependencies": {
